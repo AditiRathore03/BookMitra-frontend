@@ -1,5 +1,4 @@
 import React from "react";
-import "./middle.css";
 import vector from "../assets/images/lib_vector.webp"; // Ensure the correct path
 import { useNavigate } from "react-router-dom";
 

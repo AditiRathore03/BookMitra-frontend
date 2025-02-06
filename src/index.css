@@ -230,6 +230,120 @@ gap: 20px; /* Add spacing between toggle options */
 margin-bottom: 20px;
 }
 
+/* middle */
+
+.middle-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Left Section (50% Width) */
+.left-section {
+  
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center everything */
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 10px 10px;
+  position: relative; /* Allows absolute positioning */
+  top: -50px;
+  height: 643px;
+}
+
+/* Bottom Box (Text Section) - Moves UP */
+/* Style for left-section text */
+.bottom-box {
+  width: 80%;
+  height: auto;
+  border: none; /* Remove border */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text to top */
+  align-items: flex-start; /* Align text to left */
+  text-align: left; /* Ensure left-aligned text */
+  padding: 0px;
+  background-color: white;
+}
+
+/* Book Mitra Title */
+.bottom-box h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2f3fcf; /* Blue color for the title */
+  margin-bottom: -20px;
+  
+}
+
+/* Subheading - Library Management System */
+.bottom-box h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e12a9b;
+  margin-bottom: 10px;
+}
+
+/* Description Paragraph */
+.bottom-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+  
+  color: #040404;
+  margin-bottom: 20px;
+}
+
+/* Login Button Text (Not a Button) */
+.bottom-box .login-text {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Top Box (Login Button) - Moves DOWN */
+.top-box {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 15%; /* Moves it down */
+}
+
+/* Button Styling */
+.login-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  background-color: #2f3fcf;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right Section (50% Width) */
+.right-section {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.right-section img {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+  border-radius: 10px;
+}
+
 
 
 
