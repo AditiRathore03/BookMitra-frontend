@@ -1,5 +1,4 @@
 import React from "react";
-import "./login.css"; // Use the same styling
 import ImageSlider from "./ImageSlider";
 import { Link } from "react-router-dom";
 

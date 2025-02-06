@@ -12,3 +12,224 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* login */
+
+/* Ensure html and body take up full height */
+html, body {
+  height: 100%; /* Makes sure the page takes the full height of the viewport */
+  margin: 0;
+  padding: 0;
+}
+
+/* Background of the body */
+body {
+  background: url('./component/assets/images/lib2.webp') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* Login container covering full page */
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  box-shadow: none;
+  border-radius: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  backdrop-filter: blur(10px); /* Optional: Apply background blur */
+}
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  position: relative;
+  color: white;
+  padding: 0; /* No padding for the left section */
+  overflow: hidden;
+}
+
+.slider-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+}
+
+.brand-name {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.tagline {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Right Section (Login Form) */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #fffffe;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+ 
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust this to position the icon */
+  transform: translateY(-50%);
+  font-size: 18px; /* Adjust icon size */
+  color: #2f3fcf; /* Icon color */
+}
+
+.input-field {
+  width: 100%;
+  padding-left: 90px; /* Increase padding on the left side to ensure space for the icon */
+  padding: 10px;
+  
+  
+  
+  font-size: 16px;
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.input-field:focus {
+  border-color: #2f3fcf;
+}
+
+.login-button {
+  width:420px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2f3fcf;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #2f3fcf;
+}
+
+.social-login {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.register-link a {
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Styling for the toggle buttons */
+.login-toggle {
+display: flex;
+justify-content: center;
+margin-bottom: 1rem;
+}
+
+.toggle-option {
+margin: 0 1rem;
+font-size: 1rem;
+cursor: pointer;
+position: relative;
+color: #6c757d; /* Inactive color */
+transition: color 0.3s ease;
+}
+
+.toggle-option:hover {
+color: #000; /* Hover color */
+cursor: pointer; /* Cursor effect */
+}
+
+/* Active option styling */
+.toggle-option.active {
+color: #000; /* Active color */
+font-weight: bold;
+}
+
+.toggle-option.active::after {
+content: "";
+
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 100%;
+height: 2px;
+background-color: #000; /* Line color */
+transition: all 0.3s ease;
+}
+/* Admin Login Container */
+.admin-login-container {
+text-align: center;
+margin-top: -50px; /* Move the container upwards */
+transition: margin 0.3s ease; /* Smooth adjustment */
+}
+
+/* Adjust further for smaller screens */
+
+/* Admin Login Container */
+.admin-login-container {
+text-align: center;
+margin-top: 50px; /* Adjust vertical position */
+padding: 0px;
+
+
+
+/* border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+max-width: 400px;
+margin:auto;
+}
+
+/* Toggle Section */
+.admin-login-toggle {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px; /* Add spacing between toggle options */
+margin-bottom: 20px;
+}
+
+
+
+

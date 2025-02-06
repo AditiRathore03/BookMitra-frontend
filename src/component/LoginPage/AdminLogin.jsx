@@ -1,13 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./login.css";
 
 const AdminLogin = ({ setShowAdminLogin }) => {
   return (
     <div className="admin-login-container" >
-
-      
-
       <h1>Admin Login</h1>
       <p>Enter your credentials below:</p>
       <form className="login-form" >

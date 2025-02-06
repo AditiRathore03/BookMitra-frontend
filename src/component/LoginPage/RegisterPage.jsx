@@ -1,5 +1,4 @@
 import React from "react";
-import "./login.css"; // Use the same CSS
 import ImageSlider from "./ImageSlider";
 import { Link } from "react-router-dom";
 
@@ -41,7 +40,7 @@ const RegisterPage = () => {
 
         <p className="register-link">
           Already have an account?{" "}
-          <Link to="/" style={{ color: "#4f130b" }}>Login</Link>
+          <Link to="/login" style={{ color: "#4f130b" }}>Login</Link>
         </p>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./login.css";
 import { Link } from "react-router-dom";
 
 import ImageSlider from "./ImageSlider";
@@ -48,7 +47,7 @@ const LoginPage = () => {
                 <input
                   type="email"
                   id="email"
-                  placeholder="       Email"
+                  placeholder="Email"
                   className="input-field"
                 />
               </div>
