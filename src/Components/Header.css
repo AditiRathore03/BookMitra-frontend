@@ -8,19 +8,19 @@
     width: 100%;
     position: fixed;
     z-index: 100;
-    background-color: rgb(16,25,13);
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 1px 4px rgba(146,161,176,.15);
     top: 0%;
 }
 
 .logo-nav a{
     font-size: 20px;
-    color: rgb(233,83,75);
+    color: rgb(123, 42, 209);
     font-weight: 800;
 }
 
 .logo-nav a:hover{
-    color: wheat;
+    color: rgb(166, 29, 208);
     transition: all ease 0.5s;
 }
 
@@ -55,11 +55,11 @@
     align-items: center;
     padding: 0px 40px;
     margin-top: 15px;
-    color: rgb(243, 6, 6);
+    color: rgb(123, 42, 209);
 }
 
 .option a{
-    color: rgb(233,83,75);
+    color: rgb(123, 42, 209);
     display: flex;
     align-items: center;
     font-weight: 800;
@@ -67,7 +67,7 @@
 }
 
 .option a:hover{
-    color: wheat;
+    color: rgb(166, 29, 208);
     transition: all ease 0.5s;
 }
 

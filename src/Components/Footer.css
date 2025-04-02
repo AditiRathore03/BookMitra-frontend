@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   background-color: black;
-  color: wheat;
+  color: rgb(255, 255, 255);
 }
 
 .footer-data {
@@ -26,7 +26,7 @@
 }
 
 .usefull-links a {
-  color: wheat;
+  color: rgb(255, 255, 255);
 }
 
 .librarian-details {
@@ -39,7 +39,7 @@
 .usefull-links h1,
 .librarian-details h1 {
   font-size: 25px;
-  color: rgb(235, 88, 75);
+  color: rgb(144, 67, 212);
   padding-bottom: 15px;
   border-bottom-style: solid;
   border-bottom-width: 3.1px;
