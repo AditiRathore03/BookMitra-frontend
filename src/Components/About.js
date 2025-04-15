@@ -11,23 +11,11 @@ function About() {
                 </div>
                 <div>
                     <p className="about-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting 
-                        industry. Lorem Ipsum has been the industry's standard dummy text 
-                        ever since the 1500s, when an unknown printer took a galley of type 
-                        and scrambled it to make a type specimen book. It has survived not 
-                        only five centuries.<br/>
-                        <br/>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. 
-                        It has roots in a piece of classical Latin literature from 45 BC, 
-                        making it over 2000 years old. Richard McClintock, a Latin professor 
-                        at Hampden-Sydney College in Virginia, looked up one of the more obscure 
-                        Latin words, consectetur, from a Lorem Ipsum passage.<br/>
-                        <br/>
-                        There are many variations of passages of Lorem Ipsum available, 
-                        but the majority have suffered alteration in some form, by injected 
-                        humour<br/>
-                        <br/>
-                        Your suggestions for improvement are always welcome!
+                    Welcome to <b>BookMitra</b>, a place where knowledge and technology come together to enhance the reading experience. Designed for book lovers, students, and researchers, our library offers a vast collection spanning various genres, including fiction, non-fiction, history, science, and technology. Whether you are searching for academic resources or leisurely reads, BookMitra provides a seamless and efficient way to explore an extensive range of books.<br/>
+
+With an intuitive and user-friendly catalog, readers can easily search for books, filter by genre, and navigate through the collection with pagination. Features like a personalized favorites section and dark mode ensure a comfortable and customized browsing experience. Our system is designed to make book discovery effortless, allowing users to find and manage their reading lists with ease.<br/>
+
+At BookMitra, we believe in the power of books to inspire, educate, and transform lives. Our mission is to create an accessible and engaging space for readers, making knowledge more available and reading more enjoyable for everyone.
                     </p>
                 </div>
             </div>

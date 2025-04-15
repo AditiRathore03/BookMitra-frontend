@@ -16,7 +16,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     border: none;
-    margin: 5px;
+    margin: 5px;     
   }
   
   #books-container {
@@ -29,7 +29,7 @@ body {
   .book-card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(236, 185, 246, 0.904);
     margin: 10px;
     padding: 15px;
     width: 200px;
@@ -66,7 +66,7 @@ body {
     margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background: #007bff;
+    background: #b12eed;
     color: white;
     border: none;
     border-radius: 5px;
