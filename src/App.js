@@ -1,5 +1,6 @@
 import Home from './Pages/Home';
-import Signin from './Pages/Signin'
+import Signin from './Pages/Signin';
+import AboutUs from './Pages/AboutUs';
 import { BrowserRouter as Router, Switch, Redirect, Route } from "react-router-dom";
 import MemberDashboard from './Pages/Dashboard/MemberDashboard/MemberDashboard.js';
 import Allbooks from './Pages/Allbooks';
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path='/books'>
             <Allbooks />
+          </Route>
+          <Route exact path='/aboutus'>
+            <AboutUs />
           </Route>
         </Switch>
       </div>

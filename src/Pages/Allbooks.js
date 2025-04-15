@@ -1,68 +1,5 @@
-// import React from "react";
 import "./Allbooks.css";
-
-// function Allbooks() {
-//   return (
-//     <div className="books-page">
-//       <div className="books">
-//         <div className="book-card">
-//           <img
-//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp16xiXu1ZtTzbLy-eSwEK4Ng6cUpUZnuGbQ&usqp=CAU"
-//             alt=""
-//           ></img>
-//           <p className="bookcard-title">Wings Of Fire</p>
-//           <p className="bookcard-author">By Pranavdhar</p>
-//           <div className="bookcard-category">
-//             <p>Auto Biography</p>
-//           </div>
-//           <div className="bookcard-emptybox"></div>
-//         </div>
-//         <div className="book-card">
-//           <img
-//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Rb2t6jA5ml7n57qdTZbAOWX1qSfsLCbaOA&usqp=CAU"
-//             alt=""
-//           ></img>
-//           <p className="bookcard-title">The Power Of Your Subconscious Mind</p>
-//           <p className="bookcard-author">By Joseph</p>
-//           <div className="bookcard-category">
-//             <p>Psychology</p>
-//           </div>
-//           <div className="bookcard-emptybox"></div>
-//         </div>
-//         <div className="book-card">
-//           <img
-//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFiDRQ7a-Oo-CnMmnbIMApP1Cq9B5bYx-UA&usqp=CAU"
-//             alt=""
-//           ></img>
-//           <p className="bookcard-title">Elon Musk</p>
-//           <p className="bookcard-author">By Elon</p>
-//           <div className="bookcard-category">
-//             <p>Auto Biography</p>
-//           </div>
-//           <div className="bookcard-emptybox"></div>
-//         </div>
-//         <div className="book-card">
-//           <img
-//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Rb2t6jA5ml7n57qdTZbAOWX1qSfsLCbaOA&usqp=CAU"
-//             alt=""
-//           ></img>
-//           <p className="bookcard-title">The Subtle Art Of Not Giving A Fuck</p>
-//           <p className="bookcard-author">By Mark Manson</p>
-//           <div className="bookcard-category">
-//             <p>COMIC</p>
-//           </div>
-//           <div className="bookcard-emptybox"></div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Allbooks;
-
-
 import React, { useEffect, useState } from 'react';
-// import './LibraryBookCatalog.css';
 
 export default function LibraryBookCatalog() {
   const [allBooks, setAllBooks] = useState([]);
@@ -70,6 +7,7 @@ export default function LibraryBookCatalog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('all');
   const [modalBook, setModalBook] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const maxResults = 20;
   const totalBooksToFetch = 100;
@@ -113,11 +51,22 @@ export default function LibraryBookCatalog() {
     (book) =>
       (selectedGenre === 'all' ||
         book.genres.some((genre) =>
-          genre.toLowerCase().includes(selectedGenre)
+          genre.toLowerCase().includes(selectedGenre.toLowerCase())
         )) &&
       (book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         book.authors.toLowerCase().includes(searchTerm.toLowerCase()))
   );
+
+  const handleBookClick = (book) => {
+    console.log("Book clicked:", book);
+    setModalBook(book);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setModalBook(null);
+  };
 
   return (
     <div className="library-container">
@@ -147,9 +96,9 @@ export default function LibraryBookCatalog() {
             <div
               key={index}
               className="book-card"
-              onClick={() => setModalBook(book)}
+              onClick={() => handleBookClick(book)}
             >
-              <img src={book.thumbnail} alt="Book Cover" />
+              <img src={book.thumbnail} alt={`${book.title} Cover`} />
               <div className="book-title">{book.title}</div>
               <div className="book-author">{book.authors}</div>
               <div className="book-genres">{book.genres.join(', ')}</div>
@@ -170,20 +119,54 @@ export default function LibraryBookCatalog() {
           : 'Load More Books'}
       </button>
 
-      {modalBook && (
-        <div className="modal" onClick={() => setModalBook(null)}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <span className="close" onClick={() => setModalBook(null)}>
+      {showModal && modalBook && (
+        <div className="modal" style={modalStyles.overlay} onClick={closeModal}>
+          <div className="modal-content" style={modalStyles.content} onClick={(e) => e.stopPropagation()}>
+            <span className="close" style={modalStyles.closeButton} onClick={closeModal}>
               &times;
             </span>
             <h2>{modalBook.title}</h2>
-            <p>{modalBook.summary}</p>
+            <p><strong>Author:</strong> {modalBook.authors}</p>
+            <p><strong>Genres:</strong> {modalBook.genres.join(', ')}</p>
+            <div className="book-summary">
+              <h3>Summary</h3>
+              <p>{modalBook.summary}</p>
+            </div>
           </div>
         </div>
       )}
     </div>
   );
 }
+
+// Inline styles to ensure modal displays properly
+const modalStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    zIndex: 1000,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  content: {
+    position: 'relative',
+    backgroundColor: 'white',
+    padding: '20px',
+    borderRadius: '5px',
+    maxWidth: '80%',
+    maxHeight: '80vh',
+    overflow: 'auto'
+  },
+  closeButton: {
+    position: 'absolute',
+    top: '10px',
+    right: '10px',
+    fontSize: '24px',
+    cursor: 'pointer'
+  }
+};
