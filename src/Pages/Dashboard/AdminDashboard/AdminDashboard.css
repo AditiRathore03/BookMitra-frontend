@@ -2,7 +2,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: wheat;
+  background-color: white;
   position: relative;
 }
 
@@ -23,7 +23,7 @@
 /* Sidebar */
 
 .dashboard-options {
-  background-color: rgb(24, 33, 62);
+  background-color: rgb(123, 42, 209);
   color: wheat;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 .dashboard-logo {
   margin-top: 50px;
   margin-bottom: 50px !important;
-  color: rgb(234, 68, 74);
+  color: rgb(232, 232, 232);
   font-size: 30px;
   font-weight: 800;
   text-align: center;
@@ -45,8 +45,8 @@
 .dashboard-option {
   text-decoration: none;
   padding: 15px;
-  border-bottom: 0.5px solid salmon;
-  border-top: 1px solid rgb(234, 68, 74, 0.5);
+  border-bottom: 0.5px solid rgb(255, 254, 254);
+  border-top: 1px solid rgba(253, 253, 253, 0.5);
   color: #ffff;
   font-weight: 700;
   text-align: left;
@@ -56,10 +56,10 @@
 }
 
 .dashboard-option:hover {
-  color: rgb(234, 68, 74);
+  color: rgb(252, 252, 252);
   border-left: 5px solid rgb(234, 68, 74);
   transition: all 0.5s ease;
-  background-color: #ddd;
+  background-color: #480875;
 }
 
 .dashboard-option.clicked {
@@ -245,7 +245,7 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: rgb(24, 33, 62);
+  background-color: rgb(123, 42, 209);
   color: white;
 }
 
