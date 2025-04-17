@@ -127,4 +127,71 @@
       margin-left: 10px;
     }
   }
+
+
+  /* .profile-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logout-btn {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .profile-name {
+    font-weight: 500;
+  } */
+
+
+
+  .profile-option {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .profile-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    min-width: 150px;
+    z-index: 1000;
+  }
+  
+  .profile-dropdown a,
+  .profile-dropdown button {
+    display: block;
+    padding: 8px 16px;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .profile-dropdown a:hover,
+  .profile-dropdown button:hover {
+    background-color: #f5f5f5;
+    color: #ea444a;
+  }
+  
   
