@@ -25,9 +25,50 @@ styleLink.rel = "stylesheet";
 styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css";
 document.head.appendChild(styleLink);
 
+// Profile Component
+const Profile = () => {
+    // Get user data from localStorage
+    const userData = JSON.parse(localStorage.getItem("user")) || {};
+    
+    return (
+        <div className="dashboard-profile-content">
+            <h2 className="dashboard-option-title">Staff Profile</h2>
+            <div className="profile-container">
+                <div className="profile-header">
+                    <AccountCircleIcon style={{ fontSize: 100, color: "rgb(123, 42, 209)" }} />
+                    <h2>{userData.name || "Admin User"}</h2>
+                    <p className="profile-role">{userData.isAdmin ? "Administrator" : "Staff Member"}</p>
+                </div>
+                <div className="profile-details">
+                    <div className="profile-detail-item">
+                        <span className="profile-label">Email:</span>
+                        <span className="profile-value">{userData.email || "admin@bookmitra.com"}</span>
+                    </div>
+                    <div className="profile-detail-item">
+                        <span className="profile-label">Staff ID:</span>
+                        <span className="profile-value">{userData._id || "ADMIN001"}</span>
+                    </div>
+                    <div className="profile-detail-item">
+                        <span className="profile-label">Role:</span>
+                        <span className="profile-value">{userData.isAdmin ? "Administrator" : "Staff Member"}</span>
+                    </div>
+                    <div className="profile-detail-item">
+                        <span className="profile-label">Access Level:</span>
+                        <span className="profile-value">{userData.isAdmin ? "Full Access" : "Limited Access"}</span>
+                    </div>
+                    <div className="profile-detail-item">
+                        <span className="profile-label">Joined Date:</span>
+                        <span className="profile-value">{userData.createdAt ? new Date(userData.createdAt).toLocaleDateString() : "N/A"}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 function AdminDashboard() {
 
-    const [active, setActive] = useState("addbooks")
+    const [active, setActive] = useState("profile")
     const [sidebar, setSidebar] = useState(false)
 
     /* Logout Function*/
@@ -62,6 +103,9 @@ function AdminDashboard() {
 
                 </div>
                 <div className="dashboard-option-content">
+                    <div className="dashboard-profile-section" style={active !== "profile" ? { display: 'none' } : {}}>
+                        <Profile />
+                    </div>
                     <div className="dashboard-addbooks-content" style={active !== "addbook" ? { display: 'none' } : {}}>
                         <AddBook />
                     </div>
