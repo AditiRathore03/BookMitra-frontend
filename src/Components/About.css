@@ -1,53 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
-.about-box{
-    background-color: rgb(127, 37, 168);
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Mobile View */
-@media screen and (max-width: 768px){
-    .about-data{
-        display: grid;
-    }   
-    .about-data p{
-        margin-left: 16px;
-        margin-right: 16px;
-        font-size: 13px;
-        font-family:'Poppins', sans-serif ;
-        text-align: justify;
-        padding: 15px;
-        color: rgb(255, 255, 255);
+.about-box {
+    background-color: rgb(127, 37, 168);
+    padding: 20px;
+    height:fit-content;
+}
+
+/* Common styles for title */
+.about-title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+/* Image styles */
+.about-img img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 25px;
+    padding: 5px;
+    display: block;
+    margin: auto;
+    height:390px;
+}
+
+/* Common paragraph styles */
+.about-data p {
+    text-align: justify;
+    color: white;
+    padding: 2px;
+}
+
+/* Mobile View (default) */
+.about-data {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    gap: 10px;
+}
+
+.about-data p {
+    margin: 0 16px;
+    font-size: 13px;
+}
+
+/* Tablet View */
+@media screen and (min-width: 600px) {
+    .about-data p {
+        margin: 0 30px;
+        font-size: 14px;
     }
 }
 
 /* Desktop View */
-.about-title{
-    position: relative;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-size: 32px;
-    padding: 25px;
-}
-
-.about-img img{
-    width: 100%;
-    max-width: 700px;
-    border-radius: 25px;
-    padding: 15px;
-}
-
-@media screen and (min-width:768px) {
-    .about-data p{
-        margin-left: 50px;
-        margin-right: 50px;
-        font-size: 15px;
-        font-family:'Poppins', sans-serif ;
-        text-align: justify;
-        color: rgb(220,225,219);
-        padding: 15px;
+@media screen and (min-width: 1024px) {
+    .about-data {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
     }
-    .about-data{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    } 
+
+    .about-data p {
+        margin: 0 50px;
+        font-size: 15px;
+        color: rgb(220, 225, 219);
+    }
 }
