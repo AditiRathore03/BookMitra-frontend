@@ -1,56 +1,122 @@
-.news-container{
-    width: 100%;
-    height: auto;
-    background-color: rgb(255, 255, 255);
+.news-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #5b21b6;
+    margin-bottom: 2rem;
+}
+
+.news-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.news-column {
     display: flex;
     flex-direction: column;
 }
 
-.news-data{
+.news-card {
+    background-color: #f3e5ff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.news-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d8b4fe;
+}
+
+.news-items {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.news-title{
-    position: relative;
-    color: #0E2431;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-size: 32px;
-    padding-top: 15px;
+.news-item {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.news-subtitle{
-    font-size: 25px;
-    text-align: center;
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.news-competition-event{
-    border:2px solid rgb(91, 4, 113);
-    border-radius: 5px;
-    text-align: left;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px!important;
+.news-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.news-quiz-event{
-    border:2px solid rgb(253, 253, 253);
-    border-radius: 5px;
-    text-align: left;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px!important;
+.item-icon {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    font-weight: 600;
+    font-size: 0.875rem;
 }
 
-.news-empty{
-    width: 25px;
+.competition-icon {
+    background-color: #ddd6fe;
+    color: #6d28d9;
 }
 
-@media screen and (max-width:768px) {
-    .news-data{
-        flex-direction: column;
-    }    
+.quiz-icon {
+    background-color: #c7d2fe;
+    color: #4338ca;
+}
+
+.item-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin: 0;
+}
+
+.item-description {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.competition-item {
+    border-left: 4px solid #7c3aed;
+}
+
+.quiz-item {
+    border-left: 4px solid #4338ca;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .news-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .news-card {
+        margin-bottom: 1.5rem;
+    }
 }

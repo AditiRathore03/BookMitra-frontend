@@ -1,29 +1,122 @@
-.reservedbooks-container{
-    background-color: rgb(214, 149, 243);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.reservedbooks-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0px auto;
-    padding: 15px!important;
-}
+.reserved-books-container {
+    background-color: #f3e5ff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+  }
   
-.reservedbooks-table td,.reservedbooks-table th {
-    border: 2px solid #c995d5;
-    text-align: left;
-    padding: 8px;
-    background-color: #ffffff;
-}
-
-.reservedbooks-title{
-    position: relative;
-    color: rgb(255, 255, 255);
+  .reserved-books-title {
+    font-size: 1.75rem;
+    font-weight: bold;
     text-align: center;
-    font-size: 32px;
-}
+    color: #5b21b6;
+    margin-bottom: 1.5rem;
+  }
+  
+  .table-container {
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+  }
+  
+  .table-content {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .table-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #7c3aed;
+    color: white;
+    font-weight: 500;
+    padding: 1rem;
+  }
+  
+  .header-cell {
+    text-align: left;
+  }
+  
+  .table-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    transition: background-color 0.15s ease;
+  }
+  
+  .table-row:hover {
+    background-color: #ede9fe !important;
+  }
+  
+  .row-even {
+    background-color: #f5f3ff;
+  }
+  
+  .row-odd {
+    background-color: white;
+  }
+  
+  .name-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-initial {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #d8b4fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    color: #6d28d9;
+    font-weight: 500;
+  }
+  
+  .book-cell {
+    display: flex;
+    align-items: center;
+  }
+  
+  .book-accent {
+    width: 0.5rem;
+    height: 2rem;
+    background-color: #a78bfa;
+    border-radius: 0.25rem;
+    margin-right: 0.75rem;
+  }
+  
+  .date-cell {
+    color: #6b7280;
+  }
+  
+  .return-reminder {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #6d28d9;
+    font-size: 0.875rem;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 640px) {
+    .reserved-books-container {
+      padding: 1rem;
+    }
+    
+    .table-header, .table-row {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    
+    .header-cell:not(:first-child) {
+      display: none;
+    }
+    
+    .book-cell, .date-cell {
+      padding-left: 2.75rem;
+    }
+  }

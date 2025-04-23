@@ -4,7 +4,7 @@ import './About.css'
 function About() {
     return (
         <div className='about-box'>
-            <h2 className="about-title">About the Library</h2>
+            <h2 className="about-title">About Book Mitra</h2>
             <div className="about-data">
                 <div className="about-img">
                     <img src="https://images.unsplash.com/photo-1513001900722-370f803f498d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
