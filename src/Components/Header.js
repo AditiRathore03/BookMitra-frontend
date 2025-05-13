@@ -48,6 +48,9 @@ function Header() {
             <Link to='/'>Home</Link>
           </li>
           <li className="option" onClick={closeMenu}>
+    <Link to='/recommend'>Recommend</Link>   {/* ✅ Added this */}
+  </li>
+          <li className="option" onClick={closeMenu}>
             <Link to='/books'>Books</Link>
           </li>
           <li className="option" onClick={closeMenu}>
