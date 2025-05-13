@@ -83,7 +83,7 @@ form {
 }
 
 .signin-button {
-  background-color: rgb(146, 69, 185);
+  background-color: #01638B;
   color: white;
   padding: 18px 20px;
   margin-top: 25px;
@@ -101,7 +101,7 @@ form {
 .forget-pass {
   text-align: center;
   display: block;
-  color:rgb(146, 69, 185);
+  color:#01638B;
 }
 
 .signup-question {

@@ -15,13 +15,13 @@
   
   .logo-nav a {
     font-size: 20px;
-    color: rgb(123, 42, 209);
+    color: #01638B;
     font-weight: 800;
     text-decoration: none;
   }
   
   .logo-nav a:hover {
-    color: rgb(166, 29, 208);
+    color: #01638B;
     transition: all ease 0.5s;
   }
   
@@ -42,7 +42,7 @@
     padding: 10px 15px;
     font-size: 16px;
     border-radius: 10px;
-    border: 1px solid rgb(48, 14, 62);
+    border: 1px solid #01638B;
   }
   
   .nav-options {
@@ -57,11 +57,11 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    color: rgb(123, 42, 209);
+    color: #01638B;
   }
   
   .option a {
-    color: rgb(123, 42, 209);
+    color: #01638B;
     font-weight: 800;
     font-size: 18px;
     text-decoration: none;
@@ -69,7 +69,7 @@
   
   .option a:hover,
   .option:hover {
-    color: rgb(166, 29, 208);
+    color: #01638B;
     transition: all ease 0.5s;
   }
   
@@ -119,9 +119,9 @@
     .menu-icon {
       width: 45px;
       height: 45px;
-      color: rgb(233, 83, 75);
+      color: rgb(251, 251, 251);
       padding: 2px;
-      background-color: rgb(246, 233, 202);
+      background-color: #01638B;
       border-radius: 5px;
       cursor: pointer;
       margin-left: 10px;

@@ -35,7 +35,7 @@ const Profile = () => {
             <h2 className="dashboard-option-title">Staff Profile</h2>
             <div className="profile-container">
                 <div className="profile-header">
-                    <AccountCircleIcon style={{ fontSize: 100, color: "rgb(123, 42, 209)" }} />
+                    <AccountCircleIcon style={{ fontSize: 100, color: "#01638B" }} />
                     <h2>{userData.name || "Admin User"}</h2>
                     <p className="profile-role">{userData.isAdmin ? "Administrator" : "Staff Member"}</p>
                 </div>

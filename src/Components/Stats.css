@@ -18,8 +18,8 @@
     width: 150px;
     border-radius: 10px;
     margin: 25px;
-    -webkit-box-shadow: 0px 4px 8px rgba(136, 50, 162, 0.9);
-box-shadow: 0px 4px 8px rgba(216, 153, 236, 0.9);
+    -webkit-box-shadow: 0px 4px 8px #01638B;
+box-shadow: 0px 4px 8px #ade3f9;
     display: flex;
     flex-direction: column;
     align-items: center;

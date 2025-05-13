@@ -8,7 +8,7 @@
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    color: #5b21b6;
+    color: #01638B;
     margin-bottom: 2rem;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .news-card {
-    background-color: #f3e5ff;
+    background-color: #ffffff;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -34,11 +34,11 @@
 .news-subtitle {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #7c3aed;
+    color: #01638B;
     margin-bottom: 1rem;
     text-align: center;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #d8b4fe;
+    border-bottom: 2px solid #a0d8ed;
 }
 
 .news-items {
@@ -79,13 +79,13 @@
 }
 
 .competition-icon {
-    background-color: #ddd6fe;
-    color: #6d28d9;
+    background-color: #a0d8ed;
+    color: #01638B;
 }
 
 .quiz-icon {
-    background-color: #c7d2fe;
-    color: #4338ca;
+    background-color: #a0d8ed;
+    color: #01638B;
 }
 
 .item-title {
@@ -103,11 +103,11 @@
 }
 
 .competition-item {
-    border-left: 4px solid #7c3aed;
+    border-left: 4px solid #01638B;
 }
 
 .quiz-item {
-    border-left: 4px solid #4338ca;
+    border-left: 4px solid #01638B;
 }
 
 /* Responsive design */
