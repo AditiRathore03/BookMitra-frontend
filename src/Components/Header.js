@@ -48,7 +48,7 @@ function Header() {
             <Link to='/'>Home</Link>
           </li>
           <li className="option" onClick={closeMenu}>
-    <Link to='/recommend'>Recommend</Link>   {/* ✅ Added this */}
+          <a href="http://localhost:8501/" target="_blank" rel="noopener noreferrer">Recommend</a>
   </li>
           <li className="option" onClick={closeMenu}>
             <Link to='/books'>Books</Link>
