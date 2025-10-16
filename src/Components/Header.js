@@ -48,7 +48,7 @@ function Header() {
             <Link to='/'>Home</Link>
           </li>
           <li className="option" onClick={closeMenu}>
-          <a href="http://localhost:8501/" target="_blank" rel="noopener noreferrer">Recommend</a>
+          <a href="https://collaborative-recommendation-model-by-adarsh.streamlit.app/" target="_blank" rel="noopener noreferrer">Recommend</a>
   </li>
           <li className="option" onClick={closeMenu}>
             <Link to='/books'>Books</Link>
